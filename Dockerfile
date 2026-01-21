@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     vim \
     ffmpeg \
     && rm -rf /var/lib/apt/lists/*
-
+RUN npm install -g pm2
 WORKDIR ${HOMEDIR}
 
 # 使用 CACHEBUST 参数来强制更新
